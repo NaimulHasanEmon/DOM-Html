@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <h1 id="heading">Explore More Events</h1>
+    <button id="btn-more">Events</button>
+    <hr>
+    <input type="text" name="" id="text-field">
+    <button>Submit</button>
+    <script>
+        // For events button click
+        document.getElementById('btn-more').addEventListener('mouseover', function () {
+            document.body.style.backgroundColor = 'pink';
+        })
+
+        document.getElementById('btn-more').addEventListener('mouseout', function () {
+            document.body.style.backgroundColor = 'white';
+        })
+
+        // For input click
+        document.getElementById('text-field').addEventListener('focus', function () {
+            document.body.style.backgroundColor = 'skyblue';
+        })
+        document.getElementById('text-field').addEventListener('keyup', function(event) {
+            console.log(event.target.value);
+        })
+        document.getElementById('text-field').addEventListener('blur', function () {
+            document.body.style.backgroundColor = 'white';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+
+<body>
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Omnis, temporibus!</li>
+            <li id="item-3">Officiis, est.</li>
+            <li id="item-4">Nemo, alias?</li>
+            <li id="item-5">Omnis, consequuntur?</li>
+            <li id="item-6">Recusandae, minus!</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function () {
+            console.log('item 2 clicked');
+        })
+
+        document.getElementById('list-ul').addEventListener('click', function () {
+            console.log('ul clicked');
+        })
+
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('section container clicked');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <h1>Special events of DOM</h1>
+        <button onclick="console.log('hello from js')">Click Me</button>
+        <button onclick="console.log(69)">New Button</button>
+        <button onclick="document.body.style.backgroundColor = 'green'">Make Green</button>
+        <button onclick="makeRed()">Make Yellow-Green</button>
+        <button onclick="makeBlue()">Make Steel-Blue</button>
+        <button id="goldenRod">Make Golden-Rod</button>
+        <button id="purple">Make Purple</button>
+        <button id="make-pink">Make Pink</button>
+        <button onclick="makeLightMaroon()">Make Light-Maroon</button>
+        <button id="make-violet">Make Violet</button>
+        <button id="make-aquamarine">Make Aquamarine</button>
+        <button id="make-coral">Make Coral</button>
+    </main>
+    <script src="js/events.js"></script>
+    <script>
+
+        function makeLightMaroon() {
+            document.body.style.backgroundColor = 'rgba(201, 76, 76, 0.9)';
+        }
+
+        function makeRed() {
+            document.body.style.backgroundColor = 'yellowgreen';
+        }
+
+        const pinkButton = document.getElementById('make-pink');
+        pinkButton.onclick = makePink;
+        function makePink() {
+            document.body.style.backgroundColor = 'pink';
+        }
+
+        const violetButton = document.getElementById('make-violet');
+        violetButton.addEventListener('click', makeViolet);
+        function makeViolet() {
+            document.body.style.backgroundColor = 'violet';
+        }
+
+        const aquamarineButton = document.getElementById('make-aquamarine');
+        aquamarineButton.addEventListener('click', function Aquamarine() {
+            document.body.style.backgroundColor = 'aquamarine';
+        });
+
+        document.getElementById('make-coral').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'coral';
+        })
+    </script>
+</body>
+
+</html>

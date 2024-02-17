@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+</head>
+
+<body>
+    <h1 id="secret-info">My Secret Information</h1>
+    <input type="text" placeholder="Type delete to delete" id="input-box">
+    <button id="btn-delete" disabled>Delete</button>
+    <script>
+        document.getElementById('input-box').addEventListener('keyup', function(event) {
+            const txt = event.target.value;
+            const del = document.getElementById('btn-delete');
+            if (txt.toLowerCase() === 'delete') {
+                del.removeAttribute('disabled');
+            }
+            else {
+                del.setAttribute('disabled', '');
+            }
+        })
+
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            const secretInfo = document.getElementById('secret-info');
+            const boxText = document.getElementById('input-box');
+            boxText.value = '';
+            secretInfo.style.display = 'none';
+        })
+
+
+        // document.getElementById('input-box').addEventListener('keyup', function (event) {
+        //     const txt = event.target.value;
+        //     const del = document.getElementById('btn-delete');
+        //     if (txt.toLowerCase() === 'delete') {
+        //         del.removeAttribute('disabled');
+        //     }
+        //     else {
+        //         del.setAttribute('disabled', '');
+        //     }
+        // })
+
+        // document.getElementById('btn-delete').addEventListener('click', function () {
+        //     const inputBox = document.getElementById('input-box');
+        //     inputBox.value = '';
+
+        //     const secretInfo = document.getElementById('secret-info');
+        //     secretInfo.style.display = 'none';
+        // })
+    </script>
+</body>
+
+</html>

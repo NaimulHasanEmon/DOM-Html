@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summery</title>
+</head>
+
+<body>
+    <h1>Final DOM</h1>
+    <h3 id="h3">This is a head 3</h3>
+    <button id="first-btn">First</button>
+    <button id="second-btn">Second</button>
+
+    <p id="text">this is a paragraph.</p>
+    <input type="text" id="get-text">
+    <button id="btn-update">Update</button>
+    <br>
+
+    <script>
+        document.getElementById('first-btn').addEventListener('click', function() {
+            const firstBtn = document.getElementById('h3');
+            firstBtn.innerText = 'This is head 3 from first button';
+        })
+
+        document.getElementById('second-btn').addEventListener('click', function() {
+            const secondBtn = document.getElementById('h3');
+            secondBtn.innerText = 'This is head 3 from second button';
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function() {
+            const getInput = document.getElementById('get-text');
+            const textUpdate = getInput.value;
+            const newText = document.getElementById('text');
+            newText.innerText = textUpdate;
+            getInput.value = '';
+        })
+    </script>
+</body>
+
+</html>
